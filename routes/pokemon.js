@@ -38,4 +38,15 @@ router.get("/search", async (req, res) => {
   }
 });
 
+const pokemons = [
+  { id: 1, name: "Pikachu", image: "/images/pikachu.png" },
+  { id: 2, name: "Charmander", image: "/images/charmander.png" },
+  { id: 3, name: "Bulbasaur", image: "/images/bulbasaur.png" },
+];
+
+router.get('/home', (req, res) => {
+  res.render('pages/home', { pokemons }); 
+});
+
+
 module.exports = router;

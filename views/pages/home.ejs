@@ -15,16 +15,16 @@
 
     <!-- Pokémon List -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <% for (const pokemon of pokemonList) { %>
-        <a href="/pokemon/<%= pokemon.name %>" class="p-4 bg-white shadow rounded-lg text-center hover:shadow-xl">
-          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= pokemon.url.split('/')[6] %>.png"
-               alt="<%= pokemon.name %>"
-               class="w-32 h-32 mx-auto"/>
-          <p class="text-xl capitalize font-semibold mt-2"><%= pokemon.name %></p>
-        </a>
-      <% } %>
-    </div>
-    
+  <% for (const pokemon of pokemonList) { %>
+    <a href="/pokemon/<%= pokemon.name %>" class="p-4 bg-white shadow rounded-lg text-center hover:shadow-xl">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= pokemon.url.split('/')[6] %>.png"
+           alt="<%= pokemon.name %>"
+           class="w-32 h-32 mx-auto"/>
+      <p class="text-xl capitalize font-semibold mt-2"><%= pokemon.name %></p>
+    </a>
+  <% } %>
+</div>
+
   </div>
   <%- include("../partials/footer") %>
 </body>
